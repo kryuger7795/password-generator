@@ -1,5 +1,8 @@
 import customtkinter
 
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("blue")
+
 
 window = customtkinter.CTk()
 window.title('Генератор')
@@ -19,6 +22,9 @@ btn_clear.place(x=350, y=100)
 
 btn_generate = customtkinter.CTkButton(window, text='Генерировать')
 btn_generate.place(x=150, y=100)
+
+text_field = customtkinter.CTkTextbox(window, width=560, height=400)
+text_field.place(x=20, y=150)
 
 
 window.mainloop()
