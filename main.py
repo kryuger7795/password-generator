@@ -1,7 +1,15 @@
 import customtkinter
+import tkinter
+import random
 
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue")
+
+chars = 'qwertyuiopasdfghjklzxcvbnm'
+symbols = '!@#$%^&*()_+"№;:?-=}{]['
+
+chars = list(chars+chars.upper()+symbols)
+
 
 
 window = customtkinter.CTk()
@@ -17,7 +25,7 @@ customtkinter.CTkLabel(window, text='Длинна пароля: ').place(x=180,y
 entry_len = customtkinter.CTkEntry(window, width=50)
 entry_len.place(x=290, y=60)
 
-btn_clear = customtkinter.CTkButton(window, text='Очистить')
+btn_clear = customtkinter.CTkButton(window, text='Очистить', command=clear)
 btn_clear.place(x=350, y=100)
 
 btn_generate = customtkinter.CTkButton(window, text='Генерировать')
